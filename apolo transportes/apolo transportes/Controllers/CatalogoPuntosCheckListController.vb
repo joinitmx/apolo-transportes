@@ -20,9 +20,9 @@ Namespace Controllers
 
                     For i = 0 To dt.Rows.Count - 1
                         res(i) = New CatalogoPuntosCheckListResponse
-                        res(i).Descripcion = dt.Rows(0)("Descripcion").ToString.Trim
-                        res(i).TipoImagen = dt.Rows(0)("TipoImagen")
-                        res(i).Id = dt.Rows(0)("Id")
+                        res(i).Descripcion = dt.Rows(i)("Descripcion").ToString.Trim
+                        res(i).TipoImagen = dt.Rows(i)("TipoImagen")
+                        res(i).Id = dt.Rows(i)("Id")
                     Next
 
                     Return Request.CreateResponse(HttpStatusCode.OK, res, Configuration.Formatters.JsonFormatter)
