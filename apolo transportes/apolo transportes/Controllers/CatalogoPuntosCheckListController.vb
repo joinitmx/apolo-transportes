@@ -16,7 +16,7 @@ Namespace Controllers
 
                 If dt.Rows.Count > 0 Then
 
-                    Dim res(dt.Rows.Count) As CatalogoPuntosCheckListResponse
+                    Dim res(dt.Rows.Count - 1) As CatalogoPuntosCheckListResponse
 
                     For i = 0 To dt.Rows.Count - 1
                         res(i) = New CatalogoPuntosCheckListResponse
