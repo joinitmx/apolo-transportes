@@ -28,7 +28,7 @@ Namespace Controllers
                     Return Request.CreateResponse(HttpStatusCode.OK, res, Configuration.Formatters.JsonFormatter)
 
                 Else
-                    Throw New ArgumentException("No existe ningun registro en la tabla. (tblPuntosChecklist)")
+                    Throw New ArgumentException("No existe ningun registro en la tabla. (tblPuntosChecklist) ")
                 End If
 
             Catch ex As Exception
