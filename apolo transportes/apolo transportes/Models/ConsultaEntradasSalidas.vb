@@ -41,7 +41,7 @@ Public Class ConsultaEntradasSalidasListResponse
         Get
             Return vFecha
         End Get
-        Set(value As Fecha)
+        Set(value As String)
             vFecha = value
         End Set
     End Property
