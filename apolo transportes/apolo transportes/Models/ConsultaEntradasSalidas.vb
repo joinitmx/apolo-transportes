@@ -91,6 +91,14 @@ Public Class ConsultaEntradasSalidasListResponse
         End Set
     End Property
     
+    Public Property Estatus As Integer
+        Get
+            Return vEstatus
+        End Get
+        Set(value As Integer)
+            vEstatus = value
+        End Set
+    End Property
     
 End Class
 
