@@ -1,4 +1,4 @@
-Public Class ConsultaEntradasSalidas
+Public Class ConsultaEntradasSalidasListResponse
     Private vEntradas As Integer
     Private vSalidas As String
     Private vId As Integer
