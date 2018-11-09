@@ -5,7 +5,6 @@ Public Class ConsultaEntradasSalidasListResponse
     Private vFecha As String
     Private vidChofer As Integer
     Private vidVehiculo As Integer
-    Private vidChofer As Integer
     Private vidOrigenes As Integer
     Private vidTipoCarga As Integer
     Private vidTipoTransporte As Integer
