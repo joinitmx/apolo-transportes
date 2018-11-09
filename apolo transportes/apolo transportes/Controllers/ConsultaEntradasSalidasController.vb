@@ -40,15 +40,16 @@ Namespace Controllers
                         
                     Next
                     
-                       res(0).Entradas = E
-                       res(0).Salidas = S
-                       res(0).Id = dt.Rows(i)("Id")
-                       res(0).Fecha = "-"
-                       res(0).idChofer = 0
-                       res(0).idVehiculo = 0
-                       res(0).idTipoCarga = 0
-                       res(0).idEstatus = 0
-                       res(0).idTipoTransporte = 0
+                    res(0).Entradas = E
+                    res(0).Salidas = S
+                    res(0).Id = 0
+                    res(0).Fecha = "-"
+                    res(0).idOrigenes = 0   
+                    res(0).idChofer = 0
+                    res(0).idVehiculo = 0
+                    res(0).idTipoCarga = 0
+                    res(0).idEstatus = 0
+                    res(0).idTipoTransporte = 0
     
                         
                     Return Request.CreateResponse(HttpStatusCode.OK, res, Configuration.Formatters.JsonFormatter)
