@@ -1,8 +1,8 @@
 Public Class ConsultaEntradasSalidasListResponse
     Private vEntradas As Integer
-    Private vSalidas As String
+    Private vSalidas As Integer
     Private vId As Integer
-    Private vFecha As Date
+    Private vFecha As String
     Private vidChofer As Integer
     Private vidVehiculo As Integer
     Private vidChofer As Integer
