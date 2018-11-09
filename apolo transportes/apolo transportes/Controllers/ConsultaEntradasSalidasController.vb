@@ -10,7 +10,7 @@ Namespace Controllers
         <HttpPost>
         Public Function Post(Parametros As ConsultaEntradasSalidasListRequest) As HttpResponseMessage
             Try
-                Dim da As New MySqlDataAdapter("SELECT Id, Fecha, idOrigenes, idChofer, idVehiculo, idTipoCarga, Estatus, idTipoTransporte FROM tblMovimientos WHERE Tipo = " & Parametros.Tipo, cn)
+            Dim da As New MySqlDataAdapter("SELECT Id, Fecha, idOrigenes, idChofer, idVehiculo, idTipoCarga, Estatus, idTipoTransporte FROM tblMovimientos WHERE Tipo = " & Parametros.Tipo, cn)
                 Dim dt As New DataTable
                 Dim E as integer
                 dim S as integer 
@@ -31,24 +31,24 @@ Namespace Controllers
                         res(i).Salidas = 0
                         res(i).Id = dt.Rows(i)("Id")
                         res(i).Fecha = dt.Rows(i)("Fecha").ToString
-                        res(i).idChofer = dt.Rows(i)("idChofer")
                         res(i).idOrigenes = dt.Rows(i)("idOrigenes")
+                        res(i).idChofer = dt.Rows(i)("idChofer")
                         res(i).idVehiculo = dt.Rows(i)("idVehiculo")
                         res(i).idTipoCarga = dt.Rows(i)("idTipoCarga")
-                        res(i).idTipoTransporte = dt.Rows(i)("idTipoTransporte")
                         res(i).idEstatus = dt.Rows(i)("idEstatus")
-    
+                        res(i).idTipoTransporte = dt.Rows(i)("idTipoTransporte")
+                        
                     Next
+                    
                        res(0).Entradas = E
                        res(0).Salidas = S
                        res(0).Id = dt.Rows(i)("Id")
                        res(0).Fecha = "-"
                        res(0).idChofer = 0
-                       res(0).idOrigenes = 0
                        res(0).idVehiculo = 0
                        res(0).idTipoCarga = 0
-                       res(0).idTipoTransporte = 0
                        res(0).idEstatus = 0
+                       res(0).idTipoTransporte = 0
     
                         
                     Return Request.CreateResponse(HttpStatusCode.OK, res, Configuration.Formatters.JsonFormatter)
